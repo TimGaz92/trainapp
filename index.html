@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Jquery -->
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+ <!--  Moment.JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+<!--   firebase -->
+<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src ="script.js"></script>
+
+<head>
+	<title>Train Time App</title>
+</head>
+<body>
+
+<div id="pageTitle"><h1>Find your Train:</h1></div>
+
+<hr>
+<div id="rightBorderDiv" class="col-md-3"></div>
+<div id="formTitle"><h3>Add A Train:</h3></div>
+   <div class="input-group">
+ 
+   <div class="col-md-10"> Train Name</div> 
+    <input type="text" id="trainNameInput" class="form-control" placeholder="Train Name">
+    
+    <div class="col-md-10"> Train Interval</div>
+	<input type="text" id="timeInput" class="form-control" placeholder="Minutes ONLY">
+	
+	<div class="col-md-10"> Train Destination</div>
+	<input type="text" id="destinationInput" class="form-control" placeholder="Train Destination">
+
+</div>	
+
+    <span class="input-group-btn"></span>       
+   </div>
+<button id="submit" class="btn btn-danger" type="button">Submit</button>   
+<div id="trainsDivTitle"><h3>View Your Trains</h3></div>
+
+<table id="tableOfTrains" class="schedule-table table">
+    <tr class="first-row">
+        <th class="table-header"><h5>TRAIN NAME</h5></th>
+        <th class="table-header"><h5>TRAIN INTERVAL (minutes)</h5></th>
+        <th class="table-header"><h5>TRAIN DESTINATION</h5></th>
+        <th class="table-header"><h5>NEXT TRAIN ARRIVES</h5></th>
+        <!-- add in a travel time feild -->
+    </tr>
+</table>                
+</body>
+</html>
